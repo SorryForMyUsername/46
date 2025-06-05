@@ -21,13 +21,18 @@ namespace _46x
 
                 int choice = Console.ReadKey(true).KeyChar - '0';
 
-                switch (choice)
+                bool isTrueKey = true;
+                do
                 {
-                    case 1: magazines.Add(Magazine.Input()); break;
-                    case 2:  break;
-                    case 3: break;
-                    case 4: return;
-                }
+                    switch (choice)
+                    {
+                        case 1: magazines.Add(Magazine.Input()); break;
+                        case 2: Magazine.Output(magazines); break;
+                        case 3: Find.Magazines(magazines); break;
+                        case 4: return;
+                        default: isTrueKey = false; break;
+                    }
+                } while (!isTrueKey);
                 Console.WriteLine();
             }
         }

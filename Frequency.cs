@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace _46x
 {
-    internal class Frequency
+    enum Frequency
     {
+        Weekly,
+        Monthly,
+        Yearly
     }
 }
